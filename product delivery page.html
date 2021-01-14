@@ -1,0 +1,237 @@
+<?php
+$name = filter_input(INPUT_POST, 'name');
+$mobilenum = filter_input(INPUT_POST, 'mobilenum');
+$housenum = filter_input(INPUT_POST, 'housenum');
+$street = filter_input(INPUT_POST, 'street');
+$lmark = filter_input(INPUT_POST, 'lmark');
+$town = filter_input(INPUT_POST, 'town');
+$pincode = filter_input(INPUT_POST, 'pincode');
+$state = filter_input(INPUT_POST, 'state');
+$product = filter_input(INPUT_POST, 'product');
+$host = "localhost:3307";
+$dbusername = "root";
+$dbpassword = "";
+$dbname = "rosebud";
+// Create connection
+$con = new mysqli ($host, $dbusername, $dbpassword, $dbname);
+
+//Create a MySQL command to INSERT data into data table
+$sql = "INSERT INTO delivery (name, mobilenum, housenum, street, lmark,, town, pincode, state, product)
+VALUES ('$name', '$mobilenum', '$housenum', '$street', '$lmark', '$town', '$pincode', '$state', '$product')";
+
+//Now Insert data into database
+//Check if data is inserted or not
+if (!mysqli_query($con, $sql)) {
+	echo "Data has not saved";
+} else{
+	echo "Data is saved successfully";
+}
+
+
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Product Delivery Details</title>
+<h1 style="border:3px solid darkred; color: #196666; font-size:50px; " align=center>Product Delivery Details</h1>
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+   background-image: url("https://www.freepik.com/free-photos-vectors/peach");
+  font-family: Arial;
+
+
+
+}
+
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+}
+
+.dropbtn {
+  background-color: #3498DB;
+  color: pink;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 40px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 5;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 20px 36px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+
+table {
+  border-spacing: 0;
+  width: 100%;
+  border: 4px solid #ddd;
+
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 45px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+p.c {
+  word-spacing: 1cm;
+}
+
+.btn {
+  background-color: #ff6666;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+</style>
+
+</head>
+<body>
+
+
+<div class="row">
+  <div class="column">
+    <img src="https://luxurylaunches.com/mumbai/wp-content/uploads/2017/05/Sabyasachi-1920x1080-770x433.jpg" alt="side" style="width:100%">
+  </div>
+  <div class="column">
+
+
+  <h1 style="border:3px solid brown; color: #660033; font-size:20px; " ;</h1>
+    <form action="/action_page.php">
+
+	<br><label for="name"> Name:</label>
+<input type="text" id="name" name="name" placeholder="Enter Name" ><br><br>
+	<label for="mobileno">Mobile number:</label>
+	<input type="text" id="mobilenum" name="mobilenum" placeholder="Enter Mobile number"><br>
+
+
+
+  <p> Address:</p>
+  <label for="hno"> House number:</label>
+  <input type="text" id="housenum" name="housenum" placeholder="Enter House No/Flat"><br><br>
+  <label for="street"> Street/Area:</label>
+  <input type="text" id="street" name="street" placeholder="Enter Street/Area/Village"><br><br>
+  <label for="landmark"> Landmark:</label>
+  <input type="text" id="lmark" name="lmark" placeholder="Enter Landmark"><br><br>
+  <label for="town"> Town/City:</label>
+  <input type="text" id="town" name="town" placeholder="Town/City"><br><br>
+  <label for="pincode"> Pincode:</label>
+   <input type="text" id="pincode" name="pincode" placeholder="Pincode"><br><br>
+   <label for="state"> State:</label>
+   <input type="text" id="state" name="state" placeholder="Enter State"><br><br>
+
+<div class="btn">
+<a href="http://localhost:8090/demo/index.html"> <button type="button" class="btn">Submit</button></a>
+</div>
+
+	<div class="col-25">
+    <div class="container">
+      <h4>Ordered Products:<span class="price" style="color:black"></i> <b></b></span></h4>
+
+
+	  <label for="state"> Product:</label>
+   <input type="text" id="product" name="product" placeholder="Product"><br><br>
+
+
+
+    <label><b>Quantity:</b></label>
+    <select class="s3" >
+    <option value="1">1 </option>
+	<option value="2">2 </option>
+	<option value="3">3 </option>
+	<option value="4">4 </option>
+	<option value="5">5 </option>
+
+
+
+    </select>
+  </div>
+
+      <p class="c"><a href="#">Price:</a> <span class="price">Rs.3198</span></p>
+      <p class="c"><a href="#">Deliverycharges:</a> <span class="price">Rs.40</span></p>
+	  <p class="c"><a href="#">Discount:</a> <span class="price">5%</span></p>
+      <hr>
+      <p class="c">Total : <span class="price" style="color:black"><b>Rs.3085</b></span></p>
+    </div>
+  </div>
+
+
+
+
+  </div>
+</div>
+
+
+</form>
+
+
+</table>
+  </div>
+
+</div>
+
+</body>
+</html>

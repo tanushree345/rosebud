@@ -1,0 +1,26 @@
+body{
+  background-image: url(https://c1.wallpaperflare.com/preview/145/833/311/parking-lot-evening-building-shopping.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.homebtn{
+  border: 2px solid black;
+  color: green;
+  position: absolute;
+  top: 420px;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: black;
+    text-decoration: none;
+    text-decoration-line: none;
+  }
+
+

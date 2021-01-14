@@ -1,0 +1,25 @@
+body{
+  background-image: url(https://c4.wallpaperflare.com/wallpaper/690/846/392/pattern-dark-texture-black-wallpaper-preview.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: sans-serif;
+}
+.top{
+  text-align: center;
+  text-decoration: overline;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: serif;
+  text-shadow: 2px 2px maroon;
+
+}
+.dress{
+  text-align: center;
+  color: maroon;
+  font-size: 20px;
+  font-family: serif;
+  text-shadow: 2px 2px red;
+}

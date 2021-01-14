@@ -1,0 +1,54 @@
+body{
+  background-image: url(https://c4.wallpaperflare.com/wallpaper/795/752/833/retro-pattern-vector-dark-wallpaper-preview.jpg);
+  background-repeat: no-repeat;
+text-align: center;
+border-style: solid;
+background-size: cover;
+padding: 15px;
+margin:40px;
+font-size: 22px;
+font-family: serif;
+color: #d2b5eb;
+font-style: italic;
+opacity: 0.6;
+font-weight: bolder;
+}
+
+.par1{
+  text-align: center;
+  border-style: double;
+  padding: 20px;
+  margin:40px;
+  font-size: 18px;
+  font-family: serif;
+  color: #d2b5eb;
+
+}
+.par2{
+  text-align: center;
+  border-style:double;
+  padding: 20px;
+  margin:40px;
+  font-size: 18px;
+  font-family: serif;
+  color: #d2b5eb;
+}
+.par3{
+  text-align: center;
+  border-style:double;
+  padding: 20px;
+  margin:40px;
+  font-size: 18px;
+  font-family: serif;
+  color: #d2b5eb;
+}
+.par4{
+  text-align: center;
+  border-style:double;
+  padding: 20px;
+  margin:40px;
+  font-size: 18px;
+  font-family: serif;
+  color: #d2b5eb;
+
+}

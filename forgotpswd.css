@@ -1,0 +1,50 @@
+body{
+  background-image: url(https://c1.wallpaperflare.com/preview/427/745/192/notebook-natural-laptop-macbook.jpg);
+  background-size: cover;
+  color: skyblue;
+  font-family: serif;
+  font-size: 35px;
+}
+.signup-heading{
+  font-style:oblique;
+  color: orange;
+  float: left;
+  font-size: 65px;
+}
+.sign-up-container{
+opacity: 0.7;
+  float: left;
+  font-style:oblique;
+ padding: 35px;
+ margin: 15px;
+}
+.row1{
+  margin: 50px;
+  color: white;
+  text-align: center;
+  #link{
+    color: skyblue;
+  }
+}
+.sl4{
+  float: left;
+  font-family: serif;
+  border: none;
+  padding: 10px 0px 0px 0px ;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 20%;
+  line-height: 20px;
+border-radius: 4px 4px 4px 4px;
+  top: 370px;
+  right: 0;
+  width: 620px;
+  height: 100px;
+  text-align: center;
+  border: 1px solid;
+  opacity: 1;
+  color: white;
+  font-weight: bolder;
+}

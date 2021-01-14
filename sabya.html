@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <style media="screen">
+
+    </style>
+    <link rel="stylesheet" href="sabya.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <title>sabyasachi</title>
+  </head>
+  <body>
+
+    <div class="table">
+
+<table >
+  <tr>
+    <th><img src="https://cdn0.weddingwire.in/articles/images/9/8/7/3/img_13789/sabyasachi-mumbai-sabyasachi-facebook-reasons-to-visit-the-sabyasachi-mumbai-store.jpg" alt="sab1" width="450" height="300"> </th>
+    <th><img src="https://www.kalkifashion.com/media/wysiwyg/Pragya-real-bride-blog.jpg" alt="sab3" width="400" height="300"> </th>
+
+<th><img src="https://1.bp.blogspot.com/-dMlyeB1gOCg/WnHCQPoqt7I/AAAAAAAAFj0/llJIrQ4dDjwq76wL2704oAD2Djsm6ioBQCLcBGAs/s1600/Where-to-shop-for-a-wedding-in-Kolkatta-Sabyasachi-Couture.jpg" alt="sab2" width="400" height="300"> </th>
+  </tr>
+</table>
+</div>
+
+<div class="top">
+  <h1>Welcome To Sabyasachi Fashion!</h1>
+  <img src="https://assets.sutori.com/user-uploads/image/d44f3541-c563-46ea-9f4c-12b4313a46a2/23AE318C-8E8B-49A7-B8F1-C60147F2041A.jpeg" alt="sablogo" width="280" height="150">
+  <h3>Enjoy all new collections of sabyasachi fashion.</h3>
+</div>
+
+  <div class="table">
+    <table>
+      <tr>
+        <th><img src="https://4.bp.blogspot.com/-1bDCGGZuPVI/VeSMqZCqImI/AAAAAAAA1UU/XH5VwSMeFDs/s1600/manish-malhotra.jpg" alt="sab4" width="420" height="300"> </th>
+        <th><img src="https://c0.wallpaperflare.com/preview/478/739/595/art-body-art-bracelet-bride.jpg" alt="" width="400" height="300"> </th>
+
+<th><img src="https://cdn0.weddingwire.in/articles/images/7/8/7/3/img_13787/r10_2x_sabyasachi-mumbai-sabyasachi-facebook-lead-image.jpg" alt="sab5" width="420" height="300"> </th>
+
+      </tr>
+    </table>
+  </div>
+<div class="dress">
+  <h1>Top sabyasachi collections just for you!</h1>
+</div>
+<div class="catalog">
+  <table border="1" style="color:red;">
+    <tr>
+      <th><img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQTf43so65gJMXMn-KnTgV-gQeOzDYr5pyk4UeCvImAMVmgWVx5zJ9gNRdb89f5IrHTXexJ6ZndSdk15mnHt8WhkbiKFvcOrveAJXeQkzpE&usqp=CAE" alt="sabyacat1" height="380" width="350">
+<h3>Sabyasachi gold saree</h3> </th>
+<th><h1>ID-987453E</h1></th>
+<th><h2> Rs.1,599</h2> </th>
+<th><input id=demoInput type=number min=1 max=110>
+<button onclick="increment()">+</button>
+<button onclick="decrement()">-</button>
+<th><a href="http://localhost:8090/demo/cart.html"> <button type="button" class="button">AddToCart</button></a></th>
+</tr>
+<tr>
+<th><img src="https://i1.wp.com/frugal2fab.com/wp-content/uploads/2018/05/SAB19318084_1.jpgwidth1000.jpg?resize=1000%2C1500" alt="sabyacat2"  height="380" width="350"><h3>Sabyasachi Royal Green</h3> </th>
+<th><h1>ID-987454E</h1> </th>
+<th><h2>Rs.2000</h2> </th>
+<th><input id=demoInput type=number min=1 max=110>
+<button onclick="increment()">+</button>
+<button onclick="decrement()">-</button>
+<th><a href="file:///C:/xampp/htdocs/demo/cart.html"> <button type="button" class="button">AddToCart</button></a></th>
+</tr>
+<tr>
+<th><img src="https://5.imimg.com/data5/GO/VK/SF/SELLER-15861276/blue-embroidery-work-pure-silk-sabyasachi-party-wear-lehenga-with-blouse-500x500.jpeg" alt="sabyacat3"  height="380" width="350"><h3>Sabyasachi Blue Salwar</h3> </th>
+<th><h1>ID-987455E</h1> </th>
+<th><h2>Rs.5000</h2> </th>
+<th><input id=demoInput type=number min=1 max=110>
+<button onclick="increment()">+</button>
+<button onclick="decrement()">-</button>
+<th><a href="file:///C:/xampp/htdocs/demo/cart.html"> <button type="button" class="button">AddToCart</button></a></th>
+</tr>
+<script>
+   function increment() {
+      document.getElementById('demoInput').stepUp();
+   }
+   function decrement() {
+      document.getElementById('demoInput').stepDown();
+   }
+</script>
+ </th>
+<th>
+  <script type="text/javascript">
+  $('.add-to-cart').on('click', (e) => {
+addToCart(e.currentTarget)
+})
+
+const addToCart = (product) => {
+const productId = $(product).attr('productId');
+const isAlreadyInCart = $.grep(productsInCart, el => {return el.id == productId}).length;
+
+if (isAlreadyInCart) {
+  $.each(storageData, (i, el) => {
+    if (productId == el.id) {
+      el.itemsNumber += 1;
+    }
+  })
+} else {
+  const newProduct = {
+    id: Number(productId),
+    itemsNumber: 1
+  }
+
+  storageData.push(newProduct);
+}
+
+updateCart();
+updateProductList();
+}
+  </script>
+</th>
+    </tr>
+
+  </table>
+</div>
+</body>
+</html>

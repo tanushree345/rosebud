@@ -1,0 +1,89 @@
+<?php
+$serverNAME = "localhost:3307";
+$userNAME = "root";
+$password = "";
+$db = "rosebud";
+$conn = mysqli_connect($serverNAME, $userNAME, $password, $db);
+mysql_select_db($db);
+if(isset($_POST['username'])){
+$username=$_POST['username'];
+$password=$_POST['password'];
+$sql="select * from login where username="vvce" AND password="1234" limit 1";
+$result=mysql_query($sql);
+if(mysql_num_rows($result)==1){
+echo"You have successfully logged in";
+exit();
+}
+else
+{
+echo"you have entered incorrect password";
+}
+}
+?>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="signin.css">
+    <title>signin</title>
+  </head>
+  <body>
+    <div class="container">
+  <form action="file:///C:/xampp/htdocs/demo/main.html">
+    <div class="row">
+      <h2 style="text-align:center">Login with Social Media or Manually</h2>
+      <div class="vl">
+        <span class="vl-innertext">or</span>
+      </div>
+
+      <div class="col">
+        <a href="https://www.facebook.com/" class="fb btn">
+          <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+         </a>
+        <a href="https://twitter.com/login" class="twitter btn">
+          <i class="fa fa-twitter fa-fw"></i> Login with Twitter
+        </a>
+        <a href="https://accounts.google.com/signin/v2/identifier?flowName=GlifWebSignIn&flowEntry=ServiceLogin" class="google btn"><i class="fa fa-google fa-fw">
+          </i> Login with Google+
+        </a>
+      </div>
+
+      <div class="col">
+        <div class="hide-md-lg">
+          <p>Or sign in manually:</p>
+        </div>
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <div class="loginbtn">
+<input type="submit" name="submit" value="Login">
+</div>
+      </div>
+
+    </div>
+<br>
+<div class="forgotpswd">
+  <a href="file:///C:/xampp/htdocs/demo/forgotpswd.html">Forgot Password</a>
+</div>
+<br>
+<br>
+<div class="newuser">
+  <a href="file:///C:/xampp/htdocs/demo/register.html">New User?</a>
+</div>
+</form>
+</div>
+
+<br>
+<br>
+<div class="logend1">
+  <p>*****</p>
+</div>
+<div class="sl3">
+  <p>"STYLE is a way to say who you are without having to SPEAK..."</p>
+  <p><i>*Rosebud Boutique*</i> </p>
+</div>
+<br>
+<div class="logend2">
+  <p>*****</p>
+</div>
+  </body>
+</html>
